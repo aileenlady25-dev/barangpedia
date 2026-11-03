@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangpedia - Solusi Praktis Hidupmu</title>
+    <!-- Import Google Font Poppins & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-utama: #163B5C;
+            --teal-utama: #36B8B2;
+            --oranye-aksen: #F0783C;
+            --cream-netral: #FFF6E8;
+            --bg-body: #F9F9F9;
+            --wa-color: #25D366;
+            --font-judul: 'Poppins', sans-serif;
+            --font-isi: 'Inter', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--navy-utama);
+            font-family: var(--font-isi);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        header {
+            background-color: var(--navy-utama);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header h1 {
+            font-family: var(--font-judul);
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        header p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-top: 4px;
+            color: var(--cream-netral);
+        }
+
+        .hero { padding: 20px; text-align: center; }
+        .product-title {
+            font-family: var(--font-judul);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--navy-utama);
+            margin-bottom: 15px;
+        }
+        .product-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .video-section { padding: 0 20px 20px 20px; text-align: center; }
+        .video-section h3 {
+            font-family: var(--font-judul);
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--teal-utama);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+
+        .features {
+            background: var(--cream-netral);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--oranye-aksen);
+        }
+        .features h3 {
+            font-family: var(--font-judul);
+            font-size: 17px;
+            margin-bottom: 12px;
+            color: var(--navy-utama);
+        }
+        .features ul { list-style: none; text-align: left; }
+        .features li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .features li::before {
+            content: "✓";
+            position: absolute; left: 0;
+            color: var(--teal-utama);
+            font-weight: bold; font-size: 16px;
+        }
+
+        .btn-wa {
+            display: block;
+            background-color: var(--teal-utama);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-family: var(--font-judul);
+            font-weight: 700;
+            font-size: 16px;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(54, 184, 178, 0.4);
+            margin: 20px;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100%; max-width: 480px;
+            background: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        .sticky-cta .btn-wa { margin: 0; }
+
+        .disclaimer {
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+            padding: 0 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER & LOGO -->
+        <header>
+            <!-- PASTIKAN nama file logo di folder assets/images/ sama persis dengan tulisan di bawah ini -->
+            <img src="assets/images/logo.png" alt="Logo Barangpedia">
+            <h1>BARANGPEDIA</h1>
+            <p>Solusi Praktis Hidupmu • Semua Ada, Mudah & Cepat!</p>
+        </header>
+
+        <!-- FOTO & JUDUL PRODUK -->
+        <section class="hero">
+            <h2 class="product-title">Nebulizer Mesh Portabel Praktis</h2>
+            <!-- PASTIKAN nama file foto produk di folder assets/images/ sama persis -->
+            <img src="assets/images/produk.jpg" alt="Produk Barangpedia" class="product-img">
+        </section>
+
+        <!-- VIDEO YOUTUBE -->
+        <section class="video-section">
+            <h3>🎥 Lihat Detail & Cara Pakainya:</h3>
+            <div class="video-container">
+                <!-- Ganti tulisan KODE_YOUTUBE di bawah dengan kode video YouTube Anda (contoh: dQw4w9WgXcQ) -->
+                <iframe src="https://www.youtube.com/embed/KODE_YOUTUBE" title="Demo Produk Barangpedia" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- KEUNGGULAN PRODUK -->
+        <div class="features">
+            <h3>Kenapa Memilih Produk Ini?</h3>
+            <ul>
+                <li><strong>Informasi & Fungsi Jelas:</strong> Dijelaskan apa adanya sesuai petunjuk produk[cite: 3].</li>
+                <li><strong>Praktis & Efisien:</strong> Dirancang untuk membantu aktivitas harianmu[cite: 2].</li>
+                <li><strong>Kualitas Terkurasi:</strong> Pilihan terbaik dengan nilai yang masuk akal[cite: 2, 3].</li>
+            </ul>
+        </div>
+
+        <!-- TOMBOL WHATSAPP UTAMA -->
+        <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20Admin%20Barangpedia,%20saya%20mau%20pesan%20produk%20ini" class="btn-wa" target="_blank">
+            💬 Tanya & Pesan via WhatsApp
+        </a>
+
+        <div class="disclaimer">
+            Gunakan produk sesuai petunjuk pada kemasan[cite: 8]. Hubungi tim kami via WhatsApp untuk info ketersediaan stok dan varian.
+        </div>
+
+    </div>
+
+    <!-- TOMBOL MELAYANG DI HP -->
+    <div class="sticky-cta">
+        <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20Admin%20Barangpedia,%20saya%20mau%20pesan%20produk%20ini" class="btn-wa" target="_blank">
+            💬 Tanya & Pesan via WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>
