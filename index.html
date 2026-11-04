@@ -184,15 +184,23 @@
         <section class="hero">
             <!-- Judul Produk -->
 <h2 style="...">Nebulizer Mesh Portabel Praktis</h2>
-<!-- KODE SLIDER GESER DILETAKKAN DI SINI (MENGGANTIKAN FOTO LAMA) -->
-<div style="display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory; padding-bottom: 10px; margin-bottom: 15px;">
-    <img src="assets/images/produk-1.jpg" alt="Produk 1" style="width: 100%; max-width: 350px; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start;">
-    <img src="assets/images/produk-2.jpg" alt="Produk 2" style="width: 100%; max-width: 350px; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start;">
-    <img src="assets/images/produk-3.jpg" alt="Produk 3" style="width: 100%; max-width: 350px; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start;">
-    <img src="assets/images/produk-4.jpg" alt="Produk 4" style="width: 100%; max-width: 350px; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start;">
-    <img src="assets/images/produk-5.jpg" alt="Produk 5" style="width: 100%; max-width: 350px; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start;">
-</div>
+<!-- AREA GALERI FOTO DENGAN TOMBOL PANAH -->
+<div style="position: relative; max-width: 350px; margin: 0 auto 15px auto;">
+    <!-- Container Foto yang Bisa Digeser -->
+    <div id="productGallery" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; border-radius: 8px; -ms-overflow-style: none; scrollbar-width: none;">
+        <img src="assets/images/produk-1.jpg" alt="Produk 1" style="width: 100%; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px;">
+        <img src="assets/images/produk-2.jpg" alt="Produk 2" style="width: 100%; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px;">
+        <img src="assets/images/produk-3.jpg" alt="Produk 3" style="width: 100%; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px;">
+        <img src="assets/images/produk-4.jpg" alt="Produk 4" style="width: 100%; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px;">
+        <img src="assets/images/produk-5.jpg" alt="Produk 5" style="width: 100%; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px;">
+    </div>
 
+    <!-- Tombol Panah Kiri -->
+    <button onclick="document.getElementById('productGallery').scrollBy({left: -350, behavior: 'smooth'})" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center;">❮</button>
+
+    <!-- Tombol Panah Kanan -->
+    <button onclick="document.getElementById('productGallery').scrollBy({left: 350, behavior: 'smooth'})" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center;">❯</button>
+</div>
 <!-- Di bawahnya dilanjut dengan kotak keunggulan & tombol WhatsApp -->
            
         </section>
