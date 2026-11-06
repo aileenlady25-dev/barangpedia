@@ -251,24 +251,35 @@
         <span style="background: #eef2f7; color: #3742fa; font-size: 12px; font-weight: 600; padding: 4px 8px; border-radius: 6px;">📦 Bisa COD Seluruh Indonesia</span>
     </div>
 </div>
+       <!-- TOMBOL WHATSAPP UTAMA -->
+<a href="https://wa.me/6283824496246?text=Halo%20Admin%20Barangpedia,%20saya%20mau%20pesan%20produk%20ini" class="btn-wa btn-track-wa" target="_blank">
+    💬 Tanya & Pesan via WhatsApp
+</a>
 
-        <!-- TOMBOL WHATSAPP UTAMA -->
-        <a href="https://wa.me/6283824496246?text=Halo%20Admin%20Barangpedia,%20saya%20mau%20pesan%20produk%20ini" class="btn-wa" target="_blank">
-            💬 Tanya & Pesan via WhatsApp
-        </a>
+<div class="disclaimer">
+Gunakan produk sesuai petunjuk pada kemasan. Hubungi tim kami via WhatsApp untuk info ketersediaan stok dan varian.
+</div>
 
-        <div class="disclaimer">
-            Gunakan produk sesuai petunjuk pada kemasan. Hubungi tim kami via WhatsApp untuk info ketersediaan stok dan varian.
-        </div>
-
-    </div>
-
-    <!-- TOMBOL MELAYANG DI HP -->
-    <div class="sticky-cta">
-        <a href="https://wa.me/6283824496246?text=Halo%20Admin%20Barangpedia,%20saya%20mau%20pesan%20produk%20ini" class="btn-wa" target="_blank">
-            💬 Tanya & Pesan via WhatsApp
-        </a>
-    </div>
-
+<!-- TOMBOL MELAYANG DI HP -->
+<div class="sticky-cta">
+<a href="https://wa.me/6283824496246?text=Halo%20Admin%20Barangpedia,%20saya%20mau%20pesan%20produk%20ini" class="btn-wa btn-track-wa" target="_blank">
+    💬 Tanya & Pesan via WhatsApp
+</a>
+</div>
+        <script>
+  // Melacak semua tombol WhatsApp yang punya class 'btn-track-wa'
+  const waButtons = document.querySelectorAll('.btn-track-wa');
+  
+  waButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'klik_whatsapp', {
+          'event_category': 'Tombol Beli',
+          'event_label': 'Pesan Produk via WhatsApp'
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
